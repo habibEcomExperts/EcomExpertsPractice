@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using :is() Selector</title>
+    <style>
+        /* Global styles for headings and paragraphs */
+        :is(section, article) :is(h1, h2, p) {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* Headings in section and article */
+        :is(section, article) :is(h1, h2) {
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* Paragraphs inside sections */
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Highlighted sections */
+        .highlight :is(h1, h2) {
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-left: 5px solid #4682B4;
+        }
+
+        /* Styling for the article */
+        article {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        /* A different style for an aside */
+        aside {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-left: 3px solid #ccc;
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Links within any section */
+        section :is(a) {
+            color: #4682B4;
+            text-decoration: none;
+        }
+
+        section :is(a):hover {
+            text-decoration: underline;
+        }
+
+        
+        @media (max-width: 768px) {
+            section p {
+                font-size: 16px;
+            }
+
+            aside {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <section class="highlight">
+        <h1>About Us</h1>
+        <p>Welcome to our company! We strive to deliver the best services to our clients. Learn more <a href="#">here</a>.</p>
+    </section>
+
+    
+    <section>
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services including web development, mobile app design, and software solutions tailored to your business needs.</p>
+    </section>
+
+   
+    <article>
+        <h2>Latest News</h2>
+        <p>Our company recently launched a new product that is revolutionizing the market. Read more about it <a href="#">here</a>.</p>
+    </article>
+
+    
+    <article>
+        <h2>Blog Post</h2>
+        <p>Check out our latest blog post where we discuss the top 10 trends in the tech industry.</p>
+    </article>
+
+    
+    <aside>
+        <h2>Featured</h2>
+        <p>Our team was recently featured in Tech Magazine for our outstanding achievements in software development.</p>
+    </aside>
+
+
+    
+
+</body>
+</html>

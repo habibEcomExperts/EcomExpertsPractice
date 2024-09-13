@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Child ahnd sibling elecments</title>
+    <style>
+        .last-child-ele > li{
+            color: red;
+        }
+        /* It will select all the siblings of li in .lastchild which are below to it */
+        .last-child-ele  li ~ li{
+            background-color: blue;
+        }
+        .understanding-css li + li{
+            background-color: orangered;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nested">
+        <li>Web Development Basics
+            <ul>
+                <li>Learn HTML
+                    <ul class="last-child-ele">
+                        <li>Tags and Elements</li>
+                        <li>Attributes</li>
+                        <li>Forms and Inputs</li>
+                    </ul>
+                </li>
+                <li>Understand CSS
+                    <ul class="understanding-css">
+                        <li>Selectors</li>
+                        <li>Box Model</li>
+                        <li>Positioning</li>
+                    </ul>
+                </li>
+                <li>Practice JavaScript
+                    <ul>
+                        <li>Variables and Data Types</li>
+                        <li>Functions</li>
+                        <li>Events and DOM Manipulation</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Advanced Web Techniques
+            <ul>
+                <li>Flexbox and Grid</li>
+                <li>Responsive Design</li>
+                <li>CSS Animations</li>
+            </ul>
+        </li>
+        <li>Project Work
+            <ul>
+                <li>Create a Portfolio Website</li>
+                <li>Build a Web App</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

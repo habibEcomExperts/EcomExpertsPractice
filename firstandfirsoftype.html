@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First and first of type ad is and has property</title>
+    <style>
+       
+        /* First of type will include all the p which are first p element of it parent but not including p of card   */
+        p:first-of-type:not(.card p){
+            background-color: rgb(0, 255, 106);
+            color: #fff;
+        }
+         /* firt child will only applying css for the first direct child selected  element */
+        p:first-child{
+            background-color: orangered;
+            color: #fff;
+        }   
+        section :is(h1,h2){
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        section:has(p) {
+            font-size: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s ease;
+        }
+
+        /* :has() selector change background color if card has a button */
+        .card:has(button) {
+            background-color: #c8e6c9; 
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+   <section> <h1>The Impact of Technology</h1></section>
+
+    <p>The modern world is highly dependent on technology. It has become a fundamental part of how we live, work, and communicate on a daily basis.</p>
+    
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Technology is advancing at a rapid pace, reshaping society and the way we function within it. From smartphones to artificial intelligence, the effects of technological growth are evident in all walks of life.</p>
+    </section>
+
+    <p>People are increasingly relying on digital tools to manage their personal and professional lives. This growing dependence on technology has both positive and negative implications.</p>
+
+    <section id="body">
+        <h2>Technological Integration</h2>
+        <p>In today’s society, technology has become deeply integrated into every aspect of life. We use it for work, entertainment, communication, and much more.</p>
+        <p>Artificial intelligence (AI) is transforming industries, making processes faster and more efficient. From automating repetitive tasks to providing insights through data analysis, AI is reshaping how businesses operate.</p>
+    </section>
+
+    <p>Additionally, healthcare has greatly benefited from technological advancements. New diagnostic tools, wearable devices, and telemedicine are improving patient care and accessibility to healthcare services.</p>
+
+    <section id="communication">
+        <h2>Impacts on Communication</h2>
+        <p>Technology has also revolutionized communication. Social media platforms and messaging apps enable people to connect across the globe instantly. However, some argue that it may also lead to a decline in face-to-face interaction.</p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>While technology offers many conveniences and opportunities, it also presents challenges, such as over-reliance on digital tools and reduced social interaction. It is crucial to find a balance to harness the full potential of technology without losing essential human skills.</p>
+    </section>
+
+    <!-- card -->
+    <div class="card"></div>
+        <h2>Card Title 1</h2>
+        <p>This card doesn't have a button.</p>
+    </div>
+
+    <div class="card">
+        <h2>Card Title 2</h2>
+        <p>This card has a button!</p>
+        <button>Click Me</button>
+    </div>
+</body>
+</html>
