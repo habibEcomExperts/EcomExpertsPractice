@@ -1,0 +1,145 @@
+    /* Iceland's flag colors, from https://www.government.is/topics/governance-and-national-symbols/icelandic-national-flag/ */ 
+
+:root {
+    --sky-blue:  #02529C;
+    --snow-white:  #FFFFFF;
+    --fire-red:  #DC1E35;
+     --radius: 10px;
+    }
+    
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Fira Sans", sans-serif;
+      padding: 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+    img {
+      max-width: 100%;
+    }
+    header {
+      text-align: center;
+      background-color: var(--sky-blue);
+    }
+    h1 {
+      margin-top: 0;
+      padding-top: 1rem;
+      color: var(--snow-white);
+    }
+    /* article h2, article h3, article h4, article h5, article h6 {
+      font-family: 'PT Serif', serif;
+    } */
+    article :is(h2, h3, h4, h5) {
+      font-family: 'PT Serif', serif;
+      color:green;
+    }
+    a {
+      color: var(--fire-red);
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    address {
+      font-style: normal;
+      line-height: 1.5;
+    }
+    nav ul {
+      background-color: var(--fire-red);
+      list-style-type: "🇮🇸 ";
+      padding: 0.5rem 0;
+      margin: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      border-top: 2px solid var(--snow-white);
+    }
+    nav a {
+      display: block;
+      color: var(--snow-white);
+      text-decoration: none;
+    }
+    main {
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section{
+      display: flow-root;
+    }
+    
+    aside {
+      background-color: var(--fire-red);
+      border-radius:  var(--radius);
+    }
+    aside h3 {
+      font-family: "Fira Sans", sans-serif;
+      margin: 0.5rem 0;
+      background-color: var(--snow-white);
+      border: 1px solid var(--fire-red);
+      border-radius: var(--radius) var(--radius) 0 0;
+      color: var(--fire-red);
+      padding: 0.2rem 0.5rem;
+    }
+    aside dl {
+        color: white;
+        padding: 0 0.5rem 0.5rem 0.5rem;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    aside dt {
+      font-weight: bold;
+    }
+    aside dd {
+      margin: 0;
+    }
+    figure {
+      max-width: 512px;
+      width: 50%;
+      margin: 0;
+      float: right;
+      margin: 0 0 1rem 1rem;
+      background-color: var(--sky-blue);
+      border-radius:  var(--radius);
+    }
+    figure img {
+      border-radius:  var(--radius);
+    }
+    figcaption {
+      color: var(--snow-white);
+      padding: 1rem;
+    }
+    footer {
+      background-color: var(--sky-blue);
+      color: var(--snow-white);
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 15px double var(--fire-red);
+    }
+    footer a {
+      color: var(--snow-white);
+    }
+    article footer {
+      background-color: var(--snow-white);  
+      border: 1px double #000;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      background-color: #eeeeee;
+      padding: 0.5rem;
+      border-radius:  var(--radius);
+      color: black;
+      text-align: left;
+      margin-top: 0;
+    }
+    article footer a {
+      color: var(--fire-red);
+    }
+    /* icon for marking links that go offsite 
+    
+    https://en.wikipedia.org/w/skins/Vector/resources/common/images/external-link-ltr-icon.svg */
+    
+    
